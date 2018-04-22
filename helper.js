@@ -1,9 +1,3 @@
-values = map => {
-  return Object.keys(map).map(key => {
-    return {...map[key], id: key};
-  });
-};
-
 findMode = items => {
   const count = items.reduce((tally, item) => {
     tally[item] = (tally[item] || 0) + 1;
@@ -17,4 +11,4 @@ findMode = items => {
 
 round = number => Math.round(number * 100) / 100;
 
-module.exports = {values, findMode, round};
+module.exports = { values, findMode, round };

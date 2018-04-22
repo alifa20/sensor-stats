@@ -1,21 +1,13 @@
-const process = require('./process');
-const helper = require('./helper');
-const Proc = require('./Proc');
+const process = require("./process");
+const helper = require("./helper");
 
 calc = input => {
-  const proc = new Proc(input);
-  // const map = process.objectMap(input).process.fillModes();
-  // const map = {
-  //   ...proc.fillModes(),
-  //   ...proc.fillMedian(),
-  //   ...proc.fillAverage(),
-  // };
-  const map = proc
-    .fillModes()
-    .fillAverage()
-    .fillMedian().hashMap;
-  const res = helper.values(map);
-  return res;
+  // changes input list to object with keys of id of each sensor
+  const map1 = process.objectMap(input);
+  const map2 = process.fillModes(map1);
+  const map3 = process.fillMedian(map2);
+  const map4 = process.fillAverage(map3);
+  return Object.values(map4);
 };
 
-module.exports = {calc};
+module.exports = { calc };

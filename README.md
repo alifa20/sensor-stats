@@ -46,3 +46,32 @@ sensor to 2 decimal places in the following JSON format:
 
 We are interested in how you approach the problem and choices made on how to address the above
 requirements in addition to having a functional solution.
+
+# How to run
+
+Run `yarn test` and the unit tests should run. More testings can be added to `app.test.js` and `process.test.js`.
+
+# Solution
+
+We create an object named hashMap in the Proc class which has each sensor with a id as key.
+
+Mode, average and median properties will get filled in to the hashMap object.
+
+Count and sum will be filled in to each senor object in the hashMap object.
+
+For example hashMap object will look like this:
+
+```
+{
+  "a": {
+    "sum": 23,
+    "average": 4,
+    mode: [3.77],
+    median: [3.96],
+    "sensors": [3.96, ...]
+
+  },
+  "b" :
+   ....
+}
+```
