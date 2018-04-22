@@ -49,6 +49,8 @@ requirements in addition to having a functional solution.
 
 # How to run
 
+Run `yarn`
+
 Run `yarn test` and the unit tests should run. More testings can be added to `app.test.js` and `process.test.js`.
 
 # Solution
