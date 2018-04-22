@@ -11,4 +11,4 @@ findMode = items => {
 
 round = number => Math.round(number * 100) / 100;
 
-module.exports = { values, findMode, round };
+module.exports = { findMode, round };
